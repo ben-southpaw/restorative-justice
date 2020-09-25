@@ -4,7 +4,6 @@
 		// this file is called [slug].svelte
 		const res = await this.fetch(`blog/${params.slug}.json`);
 		const data = await res.json();
-
 		if (res.status === 200) {
 			return { post: data };
 		} else {
@@ -57,7 +56,7 @@
 	<title>{post.title}</title>
 </svelte:head>
 
-<h1>{post.title}</h1>
+<h1>{post.title || 'title'}</h1>
 
 <div class="content">
 	{@html post.html}

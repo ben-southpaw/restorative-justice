@@ -12,7 +12,7 @@ const getPost = (fileName) => {
 	);
 };
 
-export function get(req, res, _) {
+export function get(req, res) {
 	const { slug } = req.params;
 
 	const post = getPost(slug);
