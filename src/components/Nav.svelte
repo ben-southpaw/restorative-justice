@@ -7,11 +7,14 @@
 		border-bottom: 1px solid rgba(255,62,0,0.1);
 		font-weight: 300;
 		padding: 0 1em;
+		text-align: center;
+		background: transparent;
 	}
 
 	ul {
 		margin: 0;
 		padding: 0;
+		display: flex;
 	}
 
 	/* clearfix */
@@ -23,7 +26,7 @@
 
 	li {
 		display: block;
-		float: left;
+		flex: 33%;
 	}
 
 	[aria-current] {

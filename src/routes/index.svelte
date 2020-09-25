@@ -76,6 +76,10 @@
 		font-weight: 100;
 	}
 
+	aside {
+		display: none;
+	}
+
 	@media (min-width: 640px) {
 		main {
 			max-width: none;

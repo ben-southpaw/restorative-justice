@@ -4,7 +4,7 @@
 
 <section>
     <header>
-        <h1>HI there im a header</h1>
+        <h1>Bowen Thornley Legal</h1>
     </header>
 </section>
 
