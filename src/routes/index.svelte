@@ -9,7 +9,7 @@
 
 <Header />
 <main>
-	<article><h1>Hello Bemajenwomen!</h1></article>
+	<article><h1>Hello Bemajesomen!</h1></article>
 	<nav>Nav</nav>
 	<aside><p>Visit the <a href="https://svelte.dev/tutorial">Svelte tutorial</a> twats.</p></aside>
 </main>
@@ -21,6 +21,7 @@
 <style>
 	* {
 		box-sizing: border-box;
+		overflow: hidden;
 	}
 
 	img  {
@@ -38,8 +39,8 @@
 		flex: 1;
 
 		text-align: center;
-		padding: 1em;
-		max-width: 240px;
+		//padding: 1em;
+		//max-width: 240px;
 		margin: 0 auto;
 
 	}

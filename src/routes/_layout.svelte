@@ -7,9 +7,10 @@
 <style>
 	main {
 		position: relative;
-		background-color: white;
+		background-color: transparent;
+		overflow: hidden;
 		//padding: 2em;
-		margin: 0 auto;
+		margin: 0;
 		box-sizing: border-box;
 	}
 </style>
