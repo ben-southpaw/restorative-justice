@@ -3,10 +3,10 @@
 	<div class="icon"></div>
 	<nav class="nav__container">
 		<ul>
-			<li><a href="#">Work</a></li>
-			<li><a href="#">Services</a></li>
-			<li><a href="#">About</a></li>
-			<li><a href="#">Stories</a></li>
+			<li><a href="/work">Work</a></li>
+			<li><a href="/services">Services</a></li>
+			<li><a href="/about">About</a></li>
+			<li><a href="/stories">Stories</a></li>
 <!--			<div class="nav-menu"><li>menu</li></div>-->
 
 			<div class="nav-contact"><li><a href="#">Contact</a></li></div>
@@ -49,6 +49,9 @@
     a {
         text-decoration: none;
     }
+	a:hover {
+		color: black;
+	}
 
 	.icon {
 		background-image: url(./../scale.svg);
@@ -60,6 +63,10 @@
 		display: inline-block;
 		margin-left: 10vw;
         align-self: center;
+	}
+
+	.icon:hover {
+		opacity: 1;
 	}
 
     .nav-menu {

@@ -9,20 +9,14 @@
 </svelte:head>
 <Nav />
 <Header />
-<main>
-	<article><h1>Services</h1></article>
-
-	<aside><p>Visit the <a href="https://svelte.dev/tutorial">Svelte tutorial</a> twats.</p></aside>
-</main>
-<footer>Footer</footer>
 
 
 
 
-<style>
+<style lang="scss">
 	* {
 		box-sizing: border-box;
-		overflow: hidden;
+
 	}
 
 	img  {
@@ -45,28 +39,10 @@
 		margin: 0 auto;
 
 	}
-	main > article {
-		flex: 1;
-		height: 150vh;
-	}
-	main > nav,
-	main > aside {
-		flex: 0 0 20vw;
-		background: beige;
-	}
-	main > nav {
-		order: -1;
-	}
-	Header, footer {
-		background: yellowgreen;
-		height: 20vh;
-	}
-	Header, footer, article, nav, aside {
-		padding: 1em;
-	}
+
 	header {
 		text-align: center;
-		padding: 1em;
+		//padding: 1em;
 		max-width: 240px;
 		margin: 0 auto;
 	}
