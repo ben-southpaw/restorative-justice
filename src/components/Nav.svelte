@@ -1,63 +1,75 @@
-<script>
-	export let segment;
-</script>
 
-<style>
-	nav {
-		border-bottom: 1px solid rgba(255,62,0,0.1);
-		font-weight: 300;
-		padding: 0 1em;
-		text-align: center;
-		background: transparent;
-	}
+<section>
+	<div class="icon"></div>
+	<nav class="nav__container">
+		<ul>
+			<li><a href="#">Work</a></li>
+			<li><a href="#">Services</a></li>
+			<li><a href="#">About</a></li>
+			<li><a href="#">Stories</a></li>
+<!--			<div class="nav-menu"><li>menu</li></div>-->
 
-	ul {
-		margin: 0;
-		padding: 0;
+			<div class="nav-contact"><li><a href="#">Contact</a></li></div>
+		</ul>
+	</nav>
+</section>
+
+
+<style lang="scss">
+	section {
+		width: 100vw;
+		height: 10vh;
 		display: flex;
-	}
-
-	/* clearfix */
-	ul::after {
-		content: '';
-		display: block;
-		clear: both;
-	}
-
-	li {
-		display: block;
-		flex: 33%;
-	}
-
-	[aria-current] {
-		position: relative;
-		display: inline-block;
-	}
-
-	[aria-current]::after {
+		justify-content: center;
+		background: rgb(247,247,247);
+		padding-top: 3vh;
+		color: darkgray;
 		position: absolute;
-		content: '';
-		width: calc(100% - 1em);
-		height: 2px;
-		background-color: rgb(255,62,0);
-		display: block;
-		bottom: -1px;
+		top: 1.5vh;
 	}
 
-	a {
-		text-decoration: none;
-		padding: 1em 0.5em;
-		display: block;
+    nav {
+        margin-left: auto;
+        margin-right: 8vw;
+        font-size: 14px;
+    }
+
+    ul {
+        display: inline-flex;
+        justify-content: space-between;
+        }
+
+    li {
+        margin: auto 1.5vw;
+        list-style-type: none;
+        text-transform: uppercase;
+        font-weight: 600;
+    }
+
+    a {
+        text-decoration: none;
+    }
+
+	.icon {
+		background-image: url(./../scale.svg);
+		background-size: 35px;
+		background-repeat: no-repeat;
+		opacity: 0.4;
+		height: 50px;
+		width: 50px;
+		display: inline-block;
+		margin-left: 10vw;
+        align-self: center;
 	}
+
+    .nav-menu {
+        display: none;
+        padding: 6px 4px;
+    }
+
+    .nav-contact {
+        border-radius: 5px;
+        padding: 6px 4px;
+    }
+
 </style>
-
-<nav>
-	<ul>
-		<li><a aria-current="{segment === undefined ? 'page' : undefined}" href=".">home</a></li>
-		<li><a aria-current="{segment === 'about' ? 'page' : undefined}" href="about">about</a></li>
-
-		<!-- for the blog link, we're using rel=prefetch so that Sapper prefetches
-		     the blog data when we hover over the link or tap it on a touchscreen -->
-		<li><a rel=prefetch aria-current="{segment === 'blog' ? 'page' : undefined}" href="blog">blog</a></li>
-	</ul>
-</nav>

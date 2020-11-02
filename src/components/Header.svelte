@@ -1,20 +1,34 @@
 <script>
-    export let data
-    import { fly } from 'svelte/transition';
+    // export let data
+    import {fly} from 'svelte/transition';
+    import {onMount} from 'svelte';
+
 
     let valueEntered = ``;
+
+    onMount(() => {
+        setTimeout(
+            function () {
+                valueEntered = 'there';
+            }, 3000
+        );
+    });
 
 
 </script>
 
 <section>
     <header>
-
-            <input class="form__field" placeholder="Enter Your Name" bind:value={valueEntered}/>
         {#if valueEntered}
-            <h1 transition:fly="{{ y: 200, duration: 3000 }}">Hi {valueEntered} <br> welcome to Bowen Thornley Legal</h1>
+            <h1 transition:fly="{{ y: 200, duration: 2000 }}">Hi {valueEntered} <br> welcome to Bowen Thornley Legal
+            </h1>
         {/if}
     </header>
+    <div class="header-footer">
+        <div class="social-links">fb linkedIn etc</div>
+        <h4>Auckland, New Zealand</h4>
+    </div>
+
 </section>
 
 
@@ -22,13 +36,19 @@
 
     section {
         width: 100vw;
-        height: 95vh;
-        background: url(../header_image.jpg) no-repeat;
-        background-size: cover;
+        height: 90vh;
+        //background: url(../header_image.jpg) no-repeat;
+        //background-size: cover;
+        background: rgb(247, 247, 247);
         text-align: center;
         padding: 1em;
         margin: 0 auto;
+        margin-top: 10vh;
 
+    }
+
+    header {
+        margin: 20vh 0;
     }
 
     h1 {
@@ -36,29 +56,34 @@
         font-size: 4em;
         font-weight: 100;
         margin: auto;
+        margin-top: 10vh;
         width: 50%;
     }
 
-    .form__field {
-        font-family: inherit;
-        border: 0;
-        outline: 0;
-        font-size: 1.3rem;
-        color: dimgrey;
+    .header-footer {
+        height: 30vh;
+        margin-top: 20vh;
+        display: flex;
+        vertical-align: bottom;
+    }
+
+    .social-links {
+        margin-left: 10vw;
+        width: 50%;
         text-transform: uppercase;
-        padding: 7px 0;
-        background: transparent;
-        transition: border-color 0.2s;
-        //visibility: hidden;
+        justify-content: space-between;
+        color: darkgray;
+        text-align: left;
     }
 
-    .form__field::first-letter {
-        visibility: visible;
-    }
+    h4 {
+        width: 50%;
+        color: darkgray;
+        justify-content: space-between;
+        text-transform: uppercase;
+        text-align: right;
 
-    .form__field:hover {
-        visibility: visible;
+        margin-right: 10vw;
     }
-
 
 </style>

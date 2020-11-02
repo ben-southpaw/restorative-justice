@@ -1,16 +1,17 @@
 <script>
 	import Header from '../components/Header.svelte';
+	import Nav from '../components/Nav.svelte';
 	export let name;
 </script>
 
 <svelte:head>
 	<title>Restorative Justice</title>
 </svelte:head>
-
+<Nav />
 <Header />
 <main>
-	<article><h1>Hello Bemajesomen!</h1></article>
-	<nav>Nav</nav>
+	<article><h1>Services</h1></article>
+
 	<aside><p>Visit the <a href="https://svelte.dev/tutorial">Svelte tutorial</a> twats.</p></aside>
 </main>
 <footer>Footer</footer>
