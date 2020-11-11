@@ -1,7 +1,22 @@
 <script>
     import Nav from "../components/Nav.svelte";
 
-    let imgSrc = "../images/header_image.jpg";
+    let imgSrc
+    let src = '../images/header_image.jpg';
+    let count = 0;
+    let images = ['../images/header_image.jpg','../images/imageOne.jpg', '../images/IMG_0979.jpg', '../images/IMG_0987.jpg'];
+
+    function handleMouseOver(e) {
+         src = images[count++];
+         if (count > 3) {
+             count = 0;
+             src = '../images/header_image.jpg';
+         }
+        console.log(count, 'count here');
+    }
+
+    console.log(count, 'log here')
+
 </script>
 <svelte:head>
     <title>Services</title>
@@ -16,16 +31,18 @@
             </div>
             <div class="text-container">
                 <ul>
-                    <li>Your rights <span>Preview content</span></li>
-                    <li>Our role <span>Preview content</span></li>
-                    <li>Your costs <span>Preview content</span></li>
-                    <li>Next steps <span>Preview content</span></li>
-                    <li>Other links <span>Preview content</span></li>
+                    <li on:mouseover={handleMouseOver}>Your rights <span>Preview content</span></li>
+                    <li on:mouseover={handleMouseOver}>Our role <span>Preview content</span></li>
+                    <li on:mouseover={handleMouseOver}>Your costs <span>Preview content</span></li>
+                    <li on:mouseover={handleMouseOver}>Next steps <span>Preview content</span></li>
+                    <li on:mouseover={handleMouseOver}>Other links <span>Preview content</span></li>
                 </ul>
             </div>
         </div>
         <div class="flex-container">
-            <img src={imgSrc} alt="about image">
+            <!--{#if hovered}-->
+            <img {src} alt="about image">
+            <!--{/if}-->
         </div>
     </div>
 
@@ -99,8 +116,9 @@
 
     img {
         display: inline-flex;
-        width: 50vw;
+        width: 90%;
         height: 40vw;
+        padding: 0 5%;
         object-fit: contain;
     }
 

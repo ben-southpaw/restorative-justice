@@ -21,11 +21,11 @@
                     dolorum eos expedita incidunt ipsam ipsum laudantium molestiae nihil,
                     quia quos, repellendus, voluptates.</p>
             </div>
-            <img src="./../header_image.jpg" alt="about image">
+            <img src="../images/header_image.jpg" alt="about image">
         </div>
 
         <div class="flex-container">
-            <img src="./../header_image.jpg" alt="about image">
+            <img src="../images/header_image.jpg" alt="about image">
             <div class="title-container">
                 <h1 class="title">Story two</h1>
             </div>
@@ -89,8 +89,9 @@
 
     img {
         display: inline-flex;
-        width: 50vw;
+        width: 90%;
         height: 40vw;
+        padding: 0 5%;
         object-fit: contain;
     }
 
