@@ -1,21 +1,20 @@
 <script>
     import Nav from "../components/Nav.svelte";
+    import { fade } from 'svelte/transition';
+    let currentImageIndex = 0
 
-    let imgSrc
-    let src = '../images/header_image.jpg';
-    let count = 0;
-    let images = ['../images/header_image.jpg','../images/imageOne.jpg', '../images/IMG_0979.jpg', '../images/IMG_0987.jpg'];
+    //let src = '../images/header_image.jpg';
 
-    function handleMouseOver(e) {
-         src = images[count++];
-         if (count > 3) {
-             count = 0;
-             src = '../images/header_image.jpg';
-         }
-        console.log(count, 'count here');
-    }
+    const images = [
+        '../images/imageOne.jpg',
+        '../images/IMG_0979.jpg',
+        '../images/IMG_0987.jpg',
+        '../images/header_image.jpg'
+    ]
+    
+    const next = () =>
+        currentImageIndex = (currentImageIndex + 1) % images.length;
 
-    console.log(count, 'log here')
 
 </script>
 <svelte:head>
@@ -31,18 +30,18 @@
             </div>
             <div class="text-container">
                 <ul>
-                    <li on:mouseover={handleMouseOver}>Your rights <span>Preview content</span></li>
-                    <li on:mouseover={handleMouseOver}>Our role <span>Preview content</span></li>
-                    <li on:mouseover={handleMouseOver}>Your costs <span>Preview content</span></li>
-                    <li on:mouseover={handleMouseOver}>Next steps <span>Preview content</span></li>
-                    <li on:mouseover={handleMouseOver}>Other links <span>Preview content</span></li>
+                    <li on:mouseover={next}>Your rights <span>Preview content</span></li>
+                    <li on:mouseover={next}>Our role <span>Preview content</span></li>
+                    <li on:mouseover={next}>Your costs <span>Preview content</span></li>
+                    <li on:mouseover={next}>Next steps <span>Preview content</span></li>
+                    <li on:mouseover={next}>Other links <span>Preview content</span></li>
                 </ul>
             </div>
         </div>
         <div class="flex-container">
-            <!--{#if hovered}-->
-            <img {src} alt="about image">
-            <!--{/if}-->
+            {#each [images[currentImageIndex]] as photo (currentImageIndex)}
+                <img src={photo} />
+            {/each}
         </div>
     </div>
 
@@ -120,7 +119,13 @@
         height: 40vw;
         padding: 0 5%;
         object-fit: contain;
+        /*opacity: 0;*/
+        /*transition: opacity 0.2s;*/
     }
+
+    /*.visible {*/
+    /*    opacity: 1;*/
+    /*}*/
 
 
 </style>
