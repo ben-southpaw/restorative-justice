@@ -1,5 +1,7 @@
 <script>
     import Nav from "../components/Nav.svelte";
+
+    let imgSrc = "../images/header_image.jpg";
 </script>
 <svelte:head>
     <title>Services</title>
@@ -14,14 +16,16 @@
             </div>
             <div class="text-container">
                 <ul>
-                    <li>Your rights</li>
-                    <li>Our role</li>
-                    <li>Your costs</li>
-                    <li>Next steps</li>
-                    <li>Other links</li>
+                    <li>Your rights <span>Preview content</span></li>
+                    <li>Our role <span>Preview content</span></li>
+                    <li>Your costs <span>Preview content</span></li>
+                    <li>Next steps <span>Preview content</span></li>
+                    <li>Other links <span>Preview content</span></li>
                 </ul>
             </div>
-<!--            <img src="./../header_image.jpg" alt="about image">-->
+        </div>
+        <div class="flex-container">
+            <img src={imgSrc} alt="about image">
         </div>
     </div>
 
@@ -79,8 +83,18 @@
         width: 34vw;
     }
 
+    span {
+        display: none;
+
+    }
+
     li {
         list-style-type: none;
+        cursor: pointer;
+    }
+
+    li:hover span {
+        display: inline-block;
     }
 
     img {
