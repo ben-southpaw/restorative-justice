@@ -1,6 +1,6 @@
 
 <section>
-	<div class="icon"></div>
+	<a class="icon" href="/"></a>
 	<nav class="nav__container">
 		<ul>
 			<li><a href="/work">Work</a></li>

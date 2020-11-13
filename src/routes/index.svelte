@@ -1,7 +1,21 @@
 <script>
 	import Header from '../components/Header.svelte';
 	import Nav from '../components/Nav.svelte';
-	export let name;
+
+	import { onMount } from 'svelte';
+
+	var text;
+	var data = [];
+
+	onMount(async () => {
+
+		const res = await fetch(`../data/copy.json`);
+		data = await res.json();
+		text = data.services;
+		console.log(text, 'out onmount');
+	});
+
+
 </script>
 
 <svelte:head>

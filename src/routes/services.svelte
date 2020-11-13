@@ -1,9 +1,9 @@
 <script>
     import Nav from "../components/Nav.svelte";
     import { fade } from 'svelte/transition';
-    let currentImageIndex = 0
 
-    //let src = '../images/header_image.jpg';
+
+    let currentImageIndex = 0;
 
     const images = [
         '../images/imageOne.jpg',
@@ -15,7 +15,6 @@
     const next = () =>
         currentImageIndex = (currentImageIndex + 1) % images.length;
 
-
 </script>
 <svelte:head>
     <title>Services</title>
@@ -26,21 +25,21 @@
         <Nav/>
         <div class="flex-container">
             <div class="title-container">
-                <h1 class="title">Services</h1>
+                <h1 class="title">hi</h1>
             </div>
             <div class="text-container">
                 <ul>
-                    <li on:mouseover={next}>Your rights <span>Preview content</span></li>
-                    <li on:mouseover={next}>Our role <span>Preview content</span></li>
-                    <li on:mouseover={next}>Your costs <span>Preview content</span></li>
-                    <li on:mouseover={next}>Next steps <span>Preview content</span></li>
-                    <li on:mouseover={next}>Other links <span>Preview content</span></li>
+                    <li on:mouseover={next}>Your rights<span>Preview content</span></li>
+                    <li on:mouseover={next}>Restorative Justice<span>Preview content</span></li>
+                    <li on:mouseover={next}>Legal Aid<span>Preview content</span></li>
+                    <li on:mouseover={next}>Next steps<span>Preview content</span></li>
+                    <li on:mouseover={next}>Other links<span>Preview content</span></li>
                 </ul>
             </div>
         </div>
         <div class="flex-container">
             {#each [images[currentImageIndex]] as photo (currentImageIndex)}
-                <img src={photo} />
+                <img src={photo} alt="gallery"/>
             {/each}
         </div>
     </div>
