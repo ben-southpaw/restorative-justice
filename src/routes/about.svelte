@@ -20,7 +20,7 @@
                 dolorum eos expedita incidunt ipsam ipsum laudantium molestiae nihil,
                 quia quos, repellendus, voluptates.</p>
         </div>
-        <img src="../images/header_image.jpg" alt="about image">
+        <img src="../images/header_image.jpg" alt="about">
         <div class="text-container">
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis
                 dignissimos eaque eius numquam quasi quo totam!

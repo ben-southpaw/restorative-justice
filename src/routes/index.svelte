@@ -4,16 +4,16 @@
 
 	import { onMount } from 'svelte';
 
-	var text;
-	var data = [];
+
+	var data;
 
 	onMount(async () => {
-
 		const res = await fetch(`../data/copy.json`);
-		data = await res.json();
-		text = data.services;
-		console.log(text, 'out onmount');
+    data = await res.json();
+    console.log(data, 'out onmount');
 	});
+
+
 
 
 </script>
@@ -27,54 +27,6 @@
 
 
 
-<style lang="scss">
-	* {
-		box-sizing: border-box;
-
-	}
-
-	img  {
-		height: 300px;
-		width: 500px;
-	}
-	body {
-		display: flex;
-		min-height: 100vh;
-		flex-direction: column;
-		margin: 0;
-	}
-	main {
-		display: flex;
-		flex: 1;
-
-		text-align: center;
-		//padding: 1em;
-		//max-width: 240px;
-		margin: 0 auto;
-
-	}
-
-	header {
-		text-align: center;
-		//padding: 1em;
-		max-width: 240px;
-		margin: 0 auto;
-	}
-
-	h1 {
-		color: #ff3e00;
-		text-transform: uppercase;
-		font-size: 4em;
-		font-weight: 100;
-	}
-
-	aside {
-		display: none;
-	}
-
-	@media (min-width: 640px) {
-		main {
-			max-width: none;
-		}
-	}
+<style lang="css">
+	
 </style>

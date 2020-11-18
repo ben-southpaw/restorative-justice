@@ -3,6 +3,7 @@
     import {fly} from 'svelte/transition';
     import {onMount} from 'svelte';
 
+    export let data;
 
     let valueEntered = ``;
 
@@ -12,6 +13,7 @@
                 valueEntered = 'there';
             }, 3000
         );
+
     });
 
 

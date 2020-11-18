@@ -2,7 +2,6 @@
     import Nav from "../components/Nav.svelte";
     import { fade } from 'svelte/transition';
 
-
     let currentImageIndex = 0;
 
     const images = [
@@ -25,7 +24,7 @@
         <Nav/>
         <div class="flex-container">
             <div class="title-container">
-                <h1 class="title">hi</h1>
+                <h1 class="title">Services</h1>
             </div>
             <div class="text-container">
                 <ul>
@@ -110,6 +109,7 @@
 
     li:hover span {
         display: inline-block;
+        margin-left: 20px;
     }
 
     img {

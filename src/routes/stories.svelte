@@ -21,11 +21,11 @@
                     dolorum eos expedita incidunt ipsam ipsum laudantium molestiae nihil,
                     quia quos, repellendus, voluptates.</p>
             </div>
-            <img src="../images/header_image.jpg" alt="about image">
+            <img src="../images/header_image.jpg" alt="story-one">
         </div>
 
         <div class="flex-container">
-            <img src="../images/header_image.jpg" alt="about image">
+            <img src="../images/header_image.jpg" alt="story-two">
             <div class="title-container">
                 <h1 class="title">Story two</h1>
             </div>
